@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .logo{
+      margin-left: 670px;
+    }
+    .b{
+      background-color: rgb(58, 58, 184);
+    }
+    #home1{
+      margin-left: 20px;
+      color: rgba(245, 245, 245, 0.815);
+    }
+    #home2{
+      color: rgba(245, 245, 245, 0.815);
+    }
+  </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg b" style="position: fixed;">
+
+  <div class="collapse navbar-collapse" id="navbarText" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" id="home1" aria-current="page" href="http://127.0.0.1:8000/#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/todos/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/todos/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/todos/add">AddReviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/todos">AllReviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/todos/service">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/acc/signup">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="home2" href="http://127.0.0.1:8000/acc/login">Signin</a>
+        </li>
+        <div style="padding-top: 8px;">
+          {%if user.is_authenticated%}
+          <p>
+            <!-- Hii, {{user.username}} Welcome  -->
+          <a href="{%url 'logout'%}" style="text-decoration: none; color: rgba(245, 245, 245, 0.815);padding-left: 5px;">Logout</a>
+          </p>
+          {%endif%}
+        </div>
+      </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="https://www.livewireindia.com/images/livewirelogo.png" alt="logo" style="margin-right: 50px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+   </div>
+ </nav>
+</body>
+</html>

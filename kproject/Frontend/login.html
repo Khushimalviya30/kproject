@@ -1,0 +1,20 @@
+{%extends 'base.html'%} 
+
+{%block content%}
+<body style="background-image: url(https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg?auto=format&h=200);">
+        <br><br><br><br><br><br><br>
+        <div style="width: 35%;height: 500px;margin-left: 460px;margin-top: 60px;background-color: rgba(211, 211, 211, 0.555);border: 3px solid lightblue;border-radius: 5px;">
+        <h1 align="center" style="padding-top: 50px;">SIGN IN</h1><br><br><br>
+        <form method="POST" style="padding-left: 130px;padding-bottom: 30px;">
+            {%csrf_token%}
+            {{form.as_p}}<br><br>
+            <p style="padding-left: 90px;"><button style="background-color: rgb(26, 26, 102);color: white;border-radius: 5px;padding-left: 10px;padding-right: 10px;width: 100px;height: 40px;">SIGNIN</button></p>
+            <p class="text-center text-muted mt-5 mb-0" style="padding-right: 80px;">Doesn't have an account? <a href="http://127.0.0.1:8000/acc/signup"
+                class="fw-bold text-body"><u>Register here</u></a></p><br>
+        </form>
+        </div>
+        <br><br><br><br><br><br><br>
+</body>
+
+
+{%endblock%}

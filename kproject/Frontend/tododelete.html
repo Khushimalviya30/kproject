@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block content %}
+<head>
+    <style>
+        .bu{
+            background-color: rgba(221, 217, 217, 0.74);
+            height: 40px;
+            width: 110px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 4px;
+            border-color: rgba(221, 217, 217, 0.74);
+        }
+        .bu:hover{
+            color: whitesmoke;
+            background-color: red;
+        }
+        .bu1{
+            background-color: rgba(221, 217, 217, 0.74);
+            height: 40px;
+            width: 140px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 4px;
+            border-color: rgba(221, 217, 217, 0.74);
+        }
+        .bu1:hover{
+            color: whitesmoke;
+            background-color: red;
+        }
+        .bu2{
+            text-decoration: none;
+            color: black;
+        }
+        .bu2:hover{
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<br><br><br><br>
+<form method="POST" style="margin-left: 40px;">
+    {%csrf_token%}
+    <h4 style="color: rgba(128, 128, 128, 0.753);">Are You Sure?</h4><br>
+    <p style="font-size: 17px;">Are you sure you want to delete the selected review?All of the following details will be deleted:<br>"{{todo.name}}"</p><br>
+    <button type="submit" name="tododelete" class="bu">Yes, I'm sure</button>&emsp;
+    <button class="bu1"><a href="http://127.0.0.1:8000/todos" class="bu2">No, take me back</a></button>
+</form>
+<br><br><br><br><br><br><br><br><br><br>
+{%endblock%}
